@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Invitation">
+  <g fill="none" stroke="#e8b4b8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 18h40c2.2 0 4 1.8 4 4v26c0 2.2-1.8 4-4 4H12c-2.2 0-4-1.8-4-4V22c0-2.2 1.8-4 4-4z"/>
+    <path d="M10 22l22 16 22-16"/>
+    <path d="M18 30h10"/>
+    <path d="M18 36h16"/>
+    <path d="M18 42h12"/>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" aria-label="Soft background pattern">
+  <defs>
+    <pattern id="p" width="120" height="120" patternUnits="userSpaceOnUse">
+      <g opacity="0.22" fill="none" stroke="#d4919a" stroke-width="2.2">
+        <path d="M60 18c-10-12-28-10-36 2-8 12-4 28 8 38 7 6 16 12 28 24 12-12 21-18 28-24 12-10 16-26 8-38-8-12-26-14-36-2z"/>
+      </g>
+      <g opacity="0.12" fill="none" stroke="#e8b4b8" stroke-width="2.2">
+        <path d="M20 96c14-18 24-28 56-56"/>
+        <path d="M44 108c8-4 14-6 22-6"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="600" height="600" fill="url(#p)"/>
+</svg>

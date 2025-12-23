@@ -1,0 +1,270 @@
+:root {
+  /* Pastel wedding palette */
+  --color-blush: #f8e8e8;
+  --color-pink: #e8b4b8;
+  --color-rose: #d4919a;
+  --color-ivory: #fffef9;
+  --color-gold: #c9a227;
+  --color-gold-light: #e8d48b;
+  --color-text: #4a3f3f;
+  --color-text-light: #7a6f6f;
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--color-text);
+  background: var(--color-blush);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Screen container */
+.screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Primary button */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-rose) 0%, var(--color-pink) 100%);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(212, 145, 154, 0.4);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 145, 154, 0.5);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background: var(--color-ivory);
+  color: var(--color-text);
+  font-size: 1rem;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 50px;
+  border: 2px solid var(--color-pink);
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background: var(--color-pink);
+  color: white;
+}
+
+/* Icon button */
+.btn-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-ivory);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform var(--transition-fast);
+}
+
+.btn-icon:hover {
+  transform: scale(1.1);
+}
+
+.btn-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-rose);
+}
+
+/* Card */
+.card {
+  background: var(--color-ivory);
+  border-radius: 16px;
+  padding: var(--spacing-md);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Floating corner decorations */
+.corner-decor {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.corner-decor.top-left {
+  top: 0;
+  left: 0;
+}
+
+.corner-decor.top-right {
+  top: 0;
+  right: 0;
+}
+
+.corner-decor.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.corner-decor.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+/* Desktop: larger corner decorations */
+@media (min-width: 768px) {
+  .corner-decor {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Music toggle */
+.music-toggle {
+  position: fixed;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  z-index: 100;
+}
+
+/* Level indicator */
+.level-indicator {
+  position: fixed;
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  background: var(--color-ivory);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  
+  .screen {
+    padding: var(--spacing-lg);
+  }
+  
+  .btn-primary {
+    font-size: 1.2rem;
+    padding: var(--spacing-md) var(--spacing-xl);
+  }
+  
+  .card {
+    padding: var(--spacing-lg);
+    border-radius: 20px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .screen {
+    padding: var(--spacing-xl);
+  }
+}

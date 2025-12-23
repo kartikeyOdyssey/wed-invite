@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rings">
+  <g fill="none" stroke="#c9a227" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="26" cy="36" r="16"/>
+    <circle cx="40" cy="28" r="16"/>
+    <path d="M18 34c2.8 4.3 7.6 7 13 7"/>
+  </g>
+</svg>

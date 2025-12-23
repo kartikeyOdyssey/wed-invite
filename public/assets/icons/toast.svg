@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Toast">
+  <g fill="none" stroke="#c9a227" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 10l6 10-6 6v14c0 6 4 10 10 10"/>
+    <path d="M44 10l-6 10 6 6v14c0 6-4 10-10 10"/>
+    <path d="M26 20h12"/>
+    <path d="M18 26l10 8"/>
+    <path d="M46 26L36 34"/>
+    <path d="M28 54h8"/>
+  </g>
+</svg>

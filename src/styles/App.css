@@ -1,0 +1,19 @@
+.app {
+  min-height: 100vh;
+  height: 100vh;
+  height: 100svh;
+  position: relative;
+  background: 
+    url('/assets/images/background-pattern.svg') repeat,
+    linear-gradient(135deg, var(--color-blush) 0%, var(--color-ivory) 100%);
+  background-size: 200px 200px, cover;
+  background-attachment: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .app {
+    background-attachment: scroll;
+  }
+}

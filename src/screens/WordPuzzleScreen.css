@@ -1,0 +1,172 @@
+.word-puzzle-screen {
+  padding-top: 60px;
+}
+
+.word-puzzle-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+  max-width: 400px;
+}
+
+.word-puzzle-title {
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
+.word-puzzle-instruction {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.word-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.word-item {
+  background: var(--color-ivory);
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+}
+
+.word-item.found {
+  background: var(--color-gold-light);
+  color: var(--color-text);
+  text-decoration: line-through;
+}
+
+.word-grid {
+  display: grid;
+  gap: 3px;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1;
+  background: var(--color-pink);
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.grid-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--color-ivory);
+  border: none;
+  border-radius: 4px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+}
+
+.grid-cell:hover {
+  background: var(--color-blush);
+}
+
+.grid-cell.selected {
+  background: var(--color-rose);
+  color: white;
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.grid-cell.highlighted {
+  background: var(--color-gold-light);
+  color: var(--color-text);
+}
+
+/* Reward overlay */
+.reward-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: var(--spacing-md);
+}
+
+.reward-card {
+  text-align: center;
+  max-width: 300px;
+}
+
+.reward-emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.reward-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.reward-card p {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-xs);
+}
+
+.reward-date {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--color-rose);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md) !important;
+}
+
+@media (max-width: 360px) {
+  .grid-cell {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet and desktop */
+@media (min-width: 768px) {
+  .word-puzzle-content {
+    max-width: 500px;
+  }
+  
+  .word-puzzle-title {
+    font-size: 2rem;
+  }
+  
+  .word-grid {
+    max-width: 450px;
+    gap: 5px;
+  }
+  
+  .grid-cell {
+    font-size: 1.2rem;
+    border-radius: 6px;
+  }
+  
+  .word-item {
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+  }
+  
+  .reward-card {
+    max-width: 400px;
+    padding: var(--spacing-lg);
+  }
+  
+  .reward-date {
+    font-size: 1.8rem;
+  }
+}

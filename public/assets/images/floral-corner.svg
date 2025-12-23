@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet" role="img" aria-labelledby="title">
+  <title id="title">Floral corner decoration</title>
+  <g fill="none" stroke="#d4919a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 180c40-60 70-90 160-160"/>
+    <path d="M38 156c10-6 20-9 30-10"/>
+    <path d="M56 138c6-10 9-20 10-30"/>
+
+    <circle cx="70" cy="120" r="10"/>
+    <path d="M70 100c6 3 10 9 10 16"/>
+    <path d="M70 100c-6 3-10 9-10 16"/>
+    <path d="M50 120c3 6 9 10 16 10"/>
+    <path d="M90 120c-3 6-9 10-16 10"/>
+
+    <circle cx="120" cy="70" r="10"/>
+    <path d="M120 50c6 3 10 9 10 16"/>
+    <path d="M120 50c-6 3-10 9-10 16"/>
+    <path d="M100 70c3 6 9 10 16 10"/>
+    <path d="M140 70c-3 6-9 10-16 10"/>
+
+    <path d="M82 110c10 2 18 8 22 18"/>
+    <path d="M110 82c2 10 8 18 18 22"/>
+
+    <path d="M42 170c8-2 16-1 22 4"/>
+    <path d="M30 178c6-6 14-8 24-6"/>
+  </g>
+</svg>
