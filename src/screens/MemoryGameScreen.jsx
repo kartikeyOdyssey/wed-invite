@@ -73,6 +73,14 @@ function MemoryGameScreen({ pairs, onComplete }) {
   const handleContinue = () => {
     onComplete()
   }
+
+  const handleSkip = () => {
+    setLocked(false)
+    setFlippedIds([])
+    setCards(prev => prev.map(c => ({ ...c, state: 'MATCHED' })))
+    setMatchedCount(totalPairs)
+    setShowComplete(true)
+  }
   
   // Calculate grid columns based on card count
   const gridCols = cards.length <= 8 ? 4 : cards.length <= 12 ? 4 : 4
@@ -85,6 +93,12 @@ function MemoryGameScreen({ pairs, onComplete }) {
         
         <div className="memory-progress">
           {matchedCount} / {totalPairs} pairs matched
+        </div>
+
+        <div className="skip-row">
+          <button className="btn-secondary" onClick={handleSkip}>
+            Skip
+          </button>
         </div>
         
         {/* Card grid */}

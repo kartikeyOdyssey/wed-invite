@@ -1,13 +1,15 @@
 :root {
-  /* Pastel wedding palette */
-  --color-blush: #f8e8e8;
-  --color-pink: #e8b4b8;
+  /* Elegant wedding palette - mint/teal + rose gold */
+  --color-blush: #f5f0ed;
+  --color-pink: #e7928d;
   --color-rose: #d4919a;
+  --color-mint: #658482;
+  --color-mint-light: #8aa8a6;
   --color-ivory: #fffef9;
   --color-gold: #c9a227;
   --color-gold-light: #e8d48b;
-  --color-text: #4a3f3f;
-  --color-text-light: #7a6f6f;
+  --color-text: #3d4a4a;
+  --color-text-light: #6a7a7a;
   
   /* Typography */
   --font-serif: 'Playfair Display', Georgia, serif;
@@ -117,6 +119,13 @@ img {
 .btn-secondary:hover {
   background: var(--color-pink);
   color: white;
+}
+
+/* Simple utility row for optional actions (e.g., Skip) */
+.skip-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Icon button */

@@ -66,10 +66,21 @@ function WordPuzzleScreen({ config, dateLabel, onComplete }) {
   const handleContinue = () => {
     onComplete()
   }
+
+  const handleSkip = () => {
+    setFound(new Set(words.map(w => w.toUpperCase())))
+    setSelection({ start: null, end: null })
+    setShowReward(true)
+  }
   
   return (
     <div className="screen word-puzzle-screen">
       <div className="word-puzzle-content fade-in">
+        <div className="skip-row">
+          <button className="btn-secondary" onClick={handleSkip}>
+            Skip
+          </button>
+        </div>
         <h2 className="word-puzzle-title">Find the Words!</h2>
         <p className="word-puzzle-instruction">
           Tap the first and last letter of each word

@@ -47,6 +47,13 @@ function TapHeartsScreen({ reveals, onComplete }) {
   const handleContinue = () => {
     onComplete()
   }
+
+  const handleSkip = () => {
+    setCurrentReveal(null)
+    setHearts(prev => prev.map(h => ({ ...h, tapped: true })))
+    setTappedCount(reveals.length)
+    setShowComplete(true)
+  }
   
   return (
     <div className="screen tap-hearts-screen">
@@ -55,6 +62,12 @@ function TapHeartsScreen({ reveals, onComplete }) {
         <p>Each heart reveals a special detail 💕</p>
         <div className="tap-progress">
           {tappedCount} / {reveals.length} revealed
+        </div>
+
+        <div className="skip-row">
+          <button className="btn-secondary" onClick={handleSkip}>
+            Skip
+          </button>
         </div>
       </div>
       

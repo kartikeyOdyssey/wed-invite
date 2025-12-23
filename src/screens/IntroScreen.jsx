@@ -4,9 +4,9 @@ function IntroScreen({ guestName, couple, onStart }) {
   return (
     <div className="screen intro-screen">
       <div className="intro-content fade-in">
-        {/* Heart icon */}
-        <div className="intro-heart float">
-          <img src="/assets/icons/heart-rose.svg" alt="" />
+        {/* Couple illustration */}
+        <div className="intro-couple-illustration">
+          <img src="/assets/images/couple-art-colour-e7928d-indian-dressed.png" alt="Aditi & Ashish" />
         </div>
         
         {/* Welcome message */}
